@@ -1,0 +1,58 @@
+{
+  "name": "@mbarlocker/date-curry",
+  "type": "module",
+  "version": "0.0.0",
+  "author": "Matthew Barlocker",
+  "description": "date-curry is a simple wrapper around the date-fns library to allow formatting and parsing of string dates.",
+  "license": "MIT",
+  "packageManager": "yarn@4.3.1",
+  "homepage": "https://github.com/mbarlocker/date-curry",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbarlocker/date-curry.git"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "yarn.lock",
+    "LICENSE",
+    "README.md"
+  ],
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "browser": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "env TZ=UTC vitest src --coverage --run"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "@vitest/coverage-v8": "^1.2.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0"
+  },
+  "keywords": [
+    "date",
+    "date-fns",
+    "date-formatting",
+    "date parsing"
+  ]
+}
