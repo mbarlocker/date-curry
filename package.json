@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist node_modules coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "env TZ=UTC vitest src --coverage --run"
