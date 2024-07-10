@@ -1,6 +1,6 @@
 {
   "name": "@mbarlocker/date-curry",
-  "type": "module",
+  "type": "commonjs",
   "version": "0.0.0",
   "author": "Matthew Barlocker",
   "description": "date-curry is a simple wrapper around the date-fns library to allow formatting and parsing of string dates.",
@@ -18,21 +18,24 @@
     "LICENSE",
     "README.md"
   ],
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.ts",
-      "browser": "./dist/index.js",
-      "default": "./dist/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
     }
   },
   "engines": {
     "node": ">=10.0.0"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "yarn compile",
     "clean": "rm -rf dist node_modules coverage",
+    "compile": "yarn compile:cjs && yarn compile:esm",
+    "compile:cjs": "tsc -p tsconfig.cjs.json",
+    "compile:esm": "tsc -p tsconfig.esm.json",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "env TZ=UTC vitest src --coverage --run"
@@ -43,6 +46,7 @@
     "@vitest/coverage-v8": "^1.2.0",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
+    "tslib": "^2.6.3",
     "typescript": "^5.3.3",
     "vitest": "^1.2.0"
   },
