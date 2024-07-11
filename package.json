@@ -46,12 +46,12 @@
     "@vitest/coverage-v8": "^1.2.0",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
-    "tslib": "^2.6.3",
     "typescript": "^5.3.3",
     "vitest": "^1.2.0"
   },
   "dependencies": {
-    "date-fns": "^3.6.0"
+    "date-fns": "^3.6.0",
+    "tslib": "^2.6.3"
   },
   "keywords": [
     "date",
