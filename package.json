@@ -1,7 +1,7 @@
 {
   "name": "@mbarlocker/date-curry",
   "type": "commonjs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Matthew Barlocker",
   "description": "date-curry is a simple wrapper around the date-fns library to allow formatting and parsing of string dates.",
   "license": "MIT",
