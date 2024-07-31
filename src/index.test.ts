@@ -1,5 +1,5 @@
 import { assert, describe, expect, it } from 'vitest'
-import { curryDateFormat } from './index'
+import { curryDateFormat } from './index.js'
 import * as dates from 'date-fns'
 
 describe('date-curry', () => {
